@@ -1,5 +1,6 @@
 //import package for input
 import java.util.Scanner;
+//import package for LocalTime
 import java.time.LocalTime;
 
 public class helloUser {
