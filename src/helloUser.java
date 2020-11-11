@@ -1,3 +1,6 @@
+//Task: Приветствовать любого пользователя
+// при вводе его имени через командную строку.
+
 //import package for input
 import java.util.Scanner;
 //import package for LocalTime
