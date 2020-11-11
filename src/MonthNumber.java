@@ -2,6 +2,7 @@
 // Вывести на консоль название месяца, соответствующего данному числу.
 // Осуществить проверку корректности ввода чисел.
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class MonthNumber {
@@ -9,7 +10,7 @@ public class MonthNumber {
     public static int number; //month number
 
     public void checkMonth() {
-        System.out.print(" - ");
+        System.out.print("Выбран месяц - ");
         switch (number) {
             case 1:
                 System.out.print("Январь");
@@ -48,7 +49,7 @@ public class MonthNumber {
                 System.out.print("Декабрь");
                 break;
             default:
-                System.out.print("Введено неверное значение месяца. Повторите ввод.");
+                break;
         }
 
     }
@@ -56,9 +57,37 @@ public class MonthNumber {
     public static void main(String[] args) {
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("Введите число от 1 до 12, чтобы определить месяц: ");
-        number = Integer.parseInt(inputNumber.next());
 
-        MonthNumber month = new MonthNumber();
-        month.checkMonth();
+        //input number checking
+        while (inputNumber.hasNext()) {
+            try {
+                number = Integer.parseInt(inputNumber.next());
+
+                MonthNumber month = new MonthNumber();
+
+                if (number > 0 && number <= 12) {
+                    //check month number
+                    month.checkMonth();
+                } else if (number < 0) {
+                    System.out.print("Введено отрицательное значение номера месяца. Повторите ввод, используя значения от 1 до 12: ");
+                    inputNumber.nextLine();
+                } else if (number == 0) {
+                    System.out.print("Введено значение номера месяца - ноль. Повторите ввод, используя значения от 1 до 12: ");
+                    inputNumber.nextLine();
+                } else {
+                    System.out.print("Введено слишком большое значение номера месяца. Повторите ввод, используя значения от 1 до 12: ");
+                    inputNumber.nextLine();
+                }
+            } catch (NumberFormatException exp) {
+                System.err.print("Неверный формат введенного значения! Повторите ввод, используя значения от 1 до 12: ");
+                //inputNumber.nextLine();
+                break;
+            } catch (NoSuchElementException exp) {
+                System.err.print("Не введено значение! Повторите попытку: ");
+                inputNumber.nextLine();
+                break;
+            }
+        }
+        //проверку в отдельный метод!
     }
 }
