@@ -1,3 +1,6 @@
+//Task: Вывести заданное количество случайных чисел
+// с переходом и без перехода на новую строку
+
 import java.util.Arrays;
 import java.util.Scanner;
 
