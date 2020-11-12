@@ -51,7 +51,6 @@ public class MonthNumber {
             default:
                 break;
         }
-
     }
 
     public static void main(String[] args) {
@@ -69,6 +68,7 @@ public class MonthNumber {
                 if (number > 0 && number <= 12) {
                     //check month number
                     month.checkMonth();
+                    System.exit(0); //finish process after positive input
                 } else if (number < 0) {
                     System.out.print("Введено отрицательное значение номера месяца. Повторите ввод, используя значения от 1 до 12: ");
                     inputNumber.nextLine();
