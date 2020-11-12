@@ -59,6 +59,7 @@ public class MonthNumber {
         System.out.print("Введите число от 1 до 12, чтобы определить месяц: ");
 
         //input number checking
+
         while (inputNumber.hasNext()) {
             try {
                 number = Integer.parseInt(inputNumber.next());
@@ -80,14 +81,11 @@ public class MonthNumber {
                 }
             } catch (NumberFormatException exp) {
                 System.err.print("Неверный формат введенного значения! Повторите ввод, используя значения от 1 до 12: ");
-                //inputNumber.nextLine();
-                break;
+                inputNumber.nextLine();
             } catch (NoSuchElementException exp) {
                 System.err.print("Не введено значение! Повторите попытку: ");
                 inputNumber.nextLine();
-                break;
             }
         }
-        //проверку в отдельный метод!
     }
 }
