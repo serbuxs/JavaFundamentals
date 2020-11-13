@@ -1,18 +1,24 @@
+//Task: Ввести целые числа как аргументы командной строки,
+// подсчитать их сумму (произведение) и вывести результат на консоль.
+
+import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class MultiplySumNumbers {
-    public static int number_a;
-    public static int number_b;
-    public static int number_c;
-    public static int number_d;
 
     public static void main(String[] args) {
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("Введите числа: ");
-        number_a = inputNumber.nextInt();
-        number_b = inputNumber.nextInt();
-        number_c = inputNumber.nextInt();
-        number_d = inputNumber.nextInt();
-        System.out.print(number_a + number_b + number_c + number_d);
+
+        List<Integer> numbers = new ArrayList<Integer>();
+        for (int i = 0; i < 5; i++) {
+            int number = Integer.parseInt(inputNumber.next());
+            numbers.add(number);
+        }
+        System.out.print(numbers);
+        /*for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }*/
     }
 }
