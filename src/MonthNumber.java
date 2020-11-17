@@ -9,6 +9,7 @@ public class MonthNumber {
 
     public static int number; //month number
 
+    // check Month by input number
     public void checkMonth() {
         System.out.print("Выбран месяц - ");
         switch (number) {
@@ -58,7 +59,6 @@ public class MonthNumber {
         System.out.print("Введите число от 1 до 12, чтобы определить месяц: ");
 
         //input number checking
-
         while (inputNumber.hasNext()) {
             try {
                 number = Integer.parseInt(inputNumber.next());
