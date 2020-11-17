@@ -13,9 +13,13 @@ public class MultiplySumNumbers {
 
     public static void main(String[] args) {
         int i = 0;
+        // create an ArrayList
         ArrayList<Integer> numbers = new ArrayList<>();
+
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("Количество чисел: ");
+
+        // number input with validation
         try {
             number = Integer.parseInt(inputNumber.next());
             System.out.println("Указано количество - " + number + " чисел.");
