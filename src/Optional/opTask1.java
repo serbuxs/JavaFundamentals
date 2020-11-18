@@ -10,12 +10,12 @@ import java.util.Scanner;
 
 public class opTask1 {
 
-    public static int number;
-
-    public int getArgs(int count) {
+    public void getArgs(int count) {
         int i = 0;
+        int numLength; // length of number
         // create an ArrayList
         ArrayList<Integer> numbers = new ArrayList<>();
+        ArrayList<Integer> numbersLen = new ArrayList<>();
 
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("input: ");
@@ -25,11 +25,21 @@ public class opTask1 {
             numbers.add(inputNumber.nextInt());
             i++;
         }
-        System.out.println(numbers);
+
+        System.out.println("Список введенных чисел: " + numbers);
 
         // sort ArrayList elements
         Collections.sort(numbers);
-        System.out.println(numbers);
+
+        // get length of elements in ArrayList
+        for (int digits : numbers) {
+            String digit = String.valueOf(digits);
+            // numbersLen.add(digits); // add element to list
+            numLength = digit.length();
+            numbersLen.add(numLength); // add element length to list
+        }
+
+        System.out.println("Длины элементов списка: " + numbersLen);
 
         // get min and max elements in ArrayList
         int min = numbers.get(0);
@@ -39,27 +49,22 @@ public class opTask1 {
         String minStr = String.valueOf(min);
         String maxStr = String.valueOf(max);
 
-        // display min and max numbers
-        System.out.print("Min: " + min + " ");
-        System.out.println("Max: " + max + " ");
+        System.out.println("Задание 1.");
+        // display min and max numbers and their lengths
+        System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
+        System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());
 
-        // get length of shortest and longest numbers
-        System.out.println("Length of shortest number: " + minStr.length());
-        System.out.println("Length of longest number: " + maxStr.length());
-        return 0;
-    }
+        System.out.println();
+        System.out.println("Задание 2.");
 
-    // get digit length
-    public int getLength() {
-        return 0;
-    }
-
-    public int findBiggest() {
-        return 0;
+        // display sort elements in list by ascending
+        System.out.println("Отсортированный по возрастанию список числе: " + numbers);
     }
 
     public static void main(String[] args) {
         opTask1 input = new opTask1();
+
+        // call method with parameter count = 4
         input.getArgs(4);
     }
 }
