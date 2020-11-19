@@ -13,9 +13,13 @@ public class opTask1 {
     public void getArgs(int count) {
         int i = 0;
         int numLength; // length of number
+        int numCount; // count of inputed numbers
+        int sumLength = 0; // sum of numbers length
+
         // create an ArrayList
-        ArrayList<Integer> numbers = new ArrayList<>();
-        ArrayList<Integer> numbersLen = new ArrayList<>();
+        ArrayList<Integer> numbers = new ArrayList<>(); // ArrayList for storage int numbers
+        ArrayList<Integer> numbersLen = new ArrayList<>(); // ArrayList for storage length of numbers
+        ArrayList<Integer> numbersCompareAvg = new ArrayList<>(); // ArrayList for storage of numbers more than average
 
         Scanner inputNumber = new Scanner(System.in);
         System.out.print("input: ");
@@ -37,6 +41,7 @@ public class opTask1 {
             // numbersLen.add(digits); // add element to list
             numLength = digit.length();
             numbersLen.add(numLength); // add element length to list
+            sumLength += digits;
         }
 
         System.out.println("Длины элементов списка: " + numbersLen);
@@ -59,6 +64,35 @@ public class opTask1 {
 
         // display sort elements in list by ascending
         System.out.println("Отсортированный по возрастанию список числе: " + numbers);
+
+        // get count of input numbers and sum of their lengths
+        numCount = numbers.size();
+        //System.out.println(numCount);
+        //System.out.println(sumLength);
+
+        // get average length
+        int averageLen = Math.round(sumLength / numCount);
+        System.out.println("Средняя длина: " + averageLen);
+
+        // compare number length with average
+        numberCompareAverage(numbers, numbersCompareAvg, averageLen);
+
+        /*for (int numbersAvg : numbers) {
+            numberMoreAvg = String.valueOf(numbersAvg);
+            if (numbersAvg > averageLen) {
+                numbersCompareAvg.add(numbersAvg);
+            }
+        }*/
+    }
+
+    public void numberCompareAverage(ArrayList<Integer> numbers, ArrayList<Integer> numbersCompareAvg, int averageLen) {
+        for (int numbersAvg : numbers) {
+            String numberMoreAvg = String.valueOf(numbersAvg);
+            if (numbersAvg > averageLen) {
+                numbersCompareAvg.add(numbersAvg);
+                System.out.println(numbersCompareAvg + " " + numberMoreAvg.length());
+            }
+        }
     }
 
     public static void main(String[] args) {
