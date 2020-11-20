@@ -1,6 +1,7 @@
 // Optional Tasks.
 // 1. Найти самое короткое и самое длинное число. Вывести найденные числа и их длину.
-
+// 2. Вывести числа в порядке возрастания (убывания) значений их длины.
+// 3. Вывести на консоль те числа, длина которых меньше (больше) средней длины по всем числам, а также длину.
 
 package Optional;
 
@@ -22,7 +23,7 @@ public class opTask1 {
         ArrayList<Integer> numbersCompareAvg = new ArrayList<>(); // ArrayList for storage of numbers more than average
 
         Scanner inputNumber = new Scanner(System.in);
-        System.out.print("input: ");
+        System.out.print("Введите числа: ");
 
         // add elements to ArrayList
         while (i < count) {
@@ -30,7 +31,7 @@ public class opTask1 {
             i++;
         }
 
-        System.out.println("Список введенных чисел: " + numbers);
+        //System.out.println("Список введенных чисел: " + numbers);
 
         // sort ArrayList elements
         Collections.sort(numbers);
@@ -44,7 +45,7 @@ public class opTask1 {
             sumLength += numLength; // sum of number lengths in ArrayList
         }
 
-        System.out.println("Длины элементов списка: " + numbersLen);
+        //System.out.println("Длины элементов списка: " + numbersLen);
 
         // get min and max elements in ArrayList
         int min = numbers.get(0);
@@ -72,18 +73,21 @@ public class opTask1 {
 
         // get average length
         int averageLen = Math.round(sumLength / numCount);
-        System.out.println("Среднее значение длин: " + averageLen);
+        //System.out.println("Среднее значение длин: " + averageLen);
 
+        System.out.println();
+        System.out.println("Задание 3.");
         // compare number length with average
         numberCompareAverage(numbers, numbersCompareAvg, averageLen);
     }
 
     public void numberCompareAverage(ArrayList<Integer> numbers, ArrayList<Integer> numbersCompareAvg, int averageLen) {
         for (int numbersAvg : numbers) {
-            String numberMoreAvg = String.valueOf(numbersAvg);
-            if (numbersAvg > averageLen) {
-                numbersCompareAvg.add(numbersAvg);
-                System.out.println(numbersCompareAvg + " " + numberMoreAvg.length());
+            String strNumberAvg = String.valueOf(numbersAvg); //convert to String element of numbersAvg
+            int numberLen = strNumberAvg.length();
+            if (numberLen > averageLen) {
+                numbersCompareAvg.add(numberLen);
+                System.out.println("Число: " + numbersAvg + ". Длина: " + numberLen + ".");
             }
         }
     }
