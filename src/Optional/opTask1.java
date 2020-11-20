@@ -41,7 +41,7 @@ public class opTask1 {
             // numbersLen.add(digits); // add element to list
             numLength = digit.length();
             numbersLen.add(numLength); // add element length to list
-            sumLength += digits;
+            sumLength += numLength; // sum of number lengths in ArrayList
         }
 
         System.out.println("Длины элементов списка: " + numbersLen);
