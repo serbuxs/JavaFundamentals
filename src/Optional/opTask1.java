@@ -72,7 +72,7 @@ public class opTask1 {
 
         // get average length
         int averageLen = Math.round(sumLength / numCount);
-        System.out.println("Средняя длина: " + averageLen);
+        System.out.println("Среднее значение длин: " + averageLen);
 
         // compare number length with average
         numberCompareAverage(numbers, numbersCompareAvg, averageLen);
