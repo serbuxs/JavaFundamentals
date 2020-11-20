@@ -63,10 +63,10 @@ public class opTask1 {
         System.out.println("Задание 2.");
 
         // display sort elements in list by ascending
-        System.out.println("Отсортированный по возрастанию список числе: " + numbers);
+        System.out.println("Отсортированный по возрастанию список чисел: " + numbers);
 
         // get count of input numbers and sum of their lengths
-        numCount = numbers.size();
+        numCount = numbersLen.size();
         //System.out.println(numCount);
         //System.out.println(sumLength);
 
@@ -76,13 +76,6 @@ public class opTask1 {
 
         // compare number length with average
         numberCompareAverage(numbers, numbersCompareAvg, averageLen);
-
-        /*for (int numbersAvg : numbers) {
-            numberMoreAvg = String.valueOf(numbersAvg);
-            if (numbersAvg > averageLen) {
-                numbersCompareAvg.add(numbersAvg);
-            }
-        }*/
     }
 
     public void numberCompareAverage(ArrayList<Integer> numbers, ArrayList<Integer> numbersCompareAvg, int averageLen) {
