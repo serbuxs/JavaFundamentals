@@ -67,12 +67,14 @@ public class opTask1 {
     // convert min int to String
     public String minIntToStr(int min) {
         String minStr = String.valueOf(min);
+        System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
         return minStr;
     }
 
     // convert max int to String
     public String maxIntToStr(int max) {
         String maxStr = String.valueOf(max);
+        System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());
         return maxStr;
     }
 
@@ -122,13 +124,13 @@ public class opTask1 {
         /*String minStr = String.valueOf(min);
         String maxStr = String.valueOf(max);*/
 
-        System.out.println("Задание 1.");
+        //System.out.println("Задание 1.");
         // display min and max numbers and their lengths
-        System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
-        System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());
+        /*System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
+        System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());*/
 
-        System.out.println();
-        System.out.println("Задание 2.");
+        /*System.out.println();
+        System.out.println("Задание 2.");*/
 
         // display sort elements in list by ascending
         System.out.println("Отсортированный по возрастанию список чисел: " + numbers);
@@ -178,6 +180,12 @@ public class opTask1 {
         input.addToArray(numbers,4);
         input.sortArray(numbers);
         input.elemLenArray(numbers);
+
+        System.out.println("Задание 1.");
+
+
+        System.out.println();
+        System.out.println("Задание 2.");
 
         // call method with parameter count = 4
         // input.getArgs(4);
