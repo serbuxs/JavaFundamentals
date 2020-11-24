@@ -33,8 +33,8 @@ public class opTask1 {
         return numbers;
     }
 
-        // get length of elements in ArrayList
-    public int elemLenArray(ArrayList<Integer> numbers) {
+    // get length of elements in ArrayList
+    public int lengthListElement(ArrayList<Integer> numbers) {
         for (int digits : numbers) {
             String digit = String.valueOf(digits);
             // numbersLen.add(digits); // add element to list
@@ -47,41 +47,58 @@ public class opTask1 {
     }
 
     // sort ArrayList elements
-    public ArrayList<Integer> sortArray(ArrayList<Integer> numbers) {
+    public ArrayList<Integer> sortList(ArrayList<Integer> numbers) {
         Collections.sort(numbers);
+        System.out.println("Список чисел по возрастанию: " + numbers);
+        return numbers;
+    }
+
+    // display sort list elements by ascending
+    public ArrayList<Integer> sortListAscending(ArrayList<Integer> numbers) {
+        System.out.println("Отсортированный по возрастанию список чисел: " + numbers);
         return numbers;
     }
 
     // get min element in ArrayList
-    public int minElem(ArrayList<Integer> numbers) {
+    public void minListElement(ArrayList<Integer> numbers) {
         int min = numbers.get(0);
-        return min;
+        String minStr = String.valueOf(min);
+        System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
     }
 
     // get max element in ArrayList
-    public int maxElem(ArrayList<Integer> numbers) {
+    public void maxListElement(ArrayList<Integer> numbers) {
         int max = numbers.get(numbers.size() - 1);
-        return max;
-    }
-
-    // convert min int to String
-    public String minIntToStr(int min) {
-        String minStr = String.valueOf(min);
-        System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
-        return minStr;
-    }
-
-    // convert max int to String
-    public String maxIntToStr(int max) {
         String maxStr = String.valueOf(max);
         System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());
-        return maxStr;
     }
 
+    // get count of input numbers and sum of their lengths
+    public int lengthList(ArrayList<Integer> numbersLen) {
+        numCount = numbersLen.size();
+        return numCount;
+    }
 
-    // get length of elements in ArrayList
+    // get average length
+    public int averageLength(int sumLength, int numCount) {
+        int averageLen = Math.round(sumLength / numCount);
+        return averageLen;
+    }
+
+    // compare number length with average
+    public void numberCompareAverage(ArrayList<Integer> numbers, ArrayList<Integer> numbersCompareAvg, int averageLen) {
+        for (int numbersAvg : numbers) {
+            String strNumberAvg = String.valueOf(numbersAvg); //convert to String element of numbersAvg
+            int numberLen = strNumberAvg.length();
+            if (numberLen > averageLen) {
+                numbersCompareAvg.add(numberLen);
+                System.out.println("Число: " + numbersAvg + ". Длина: " + numberLen + ".");
+            }
+        }
+
+    /*// get length of elements in ArrayList
     public void getArgs(int count) {
-        /*int i = 0;
+        *//*int i = 0;
         int numLength; // length of number
         int numCount; // count of inputed numbers
         int sumLength = 0; // sum of numbers length
@@ -92,13 +109,13 @@ public class opTask1 {
         ArrayList<Integer> numbersCompareAvg = new ArrayList<>(); // ArrayList for storage of numbers more than average
 
         Scanner inputNumber = new Scanner(System.in);
-        System.out.print("Введите числа: ");*/
+        System.out.print("Введите числа: ");*//*
 
         // add elements to ArrayList
-        /*while (i < count) {
+        *//*while (i < count) {
             numbers.add(inputNumber.nextInt());
             i++;
-        }*/
+        }*//*
 
         //System.out.println("Список введенных чисел: " + numbers);
 
@@ -106,59 +123,49 @@ public class opTask1 {
         // Collections.sort(numbers);
 
         // get length of elements in ArrayList
-        /*for (int digits : numbers) {
+        *//*for (int digits : numbers) {
             String digit = String.valueOf(digits);
             // numbersLen.add(digits); // add element to list
             numLength = digit.length();
             numbersLen.add(numLength); // add element length to list
             sumLength += numLength; // sum of number lengths in ArrayList
-        }*/
+        }*//*
 
         //System.out.println("Длины элементов списка: " + numbersLen);
 
         // get min and max elements in ArrayList
-        /*int min = numbers.get(0);
-        int max = numbers.get(numbers.size() - 1);*/
+        *//*int min = numbers.get(0);
+        int max = numbers.get(numbers.size() - 1);*//*
 
         // convert int to String
-        /*String minStr = String.valueOf(min);
-        String maxStr = String.valueOf(max);*/
+        *//*String minStr = String.valueOf(min);
+        String maxStr = String.valueOf(max);*//*
 
         //System.out.println("Задание 1.");
         // display min and max numbers and their lengths
-        /*System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
-        System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());*/
+        *//*System.out.println("Самое короткое число: " + min + ". Длина числа: " + minStr.length());
+        System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());*//*
 
-        /*System.out.println();
-        System.out.println("Задание 2.");*/
+         *//*System.out.println();
+        System.out.println("Задание 2.");*//*
 
         // display sort elements in list by ascending
-        System.out.println("Отсортированный по возрастанию список чисел: " + numbers);
+        //System.out.println("Отсортированный по возрастанию список чисел: " + numbers);
 
         // get count of input numbers and sum of their lengths
-        numCount = numbersLen.size();
+        // numCount = numbersLen.size();
         //System.out.println(numCount);
         //System.out.println(sumLength);
 
         // get average length
-        int averageLen = Math.round(sumLength / numCount);
+        //int averageLen = Math.round(sumLength / numCount);
         //System.out.println("Среднее значение длин: " + averageLen);
 
-        System.out.println();
-        System.out.println("Задание 3.");
+        *//*System.out.println();
+        System.out.println("Задание 3.");*//*
         // compare number length with average
-        numberCompareAverage(numbers, numbersCompareAvg, averageLen);
-    }
-
-    public void numberCompareAverage(ArrayList<Integer> numbers, ArrayList<Integer> numbersCompareAvg, int averageLen) {
-        for (int numbersAvg : numbers) {
-            String strNumberAvg = String.valueOf(numbersAvg); //convert to String element of numbersAvg
-            int numberLen = strNumberAvg.length();
-            if (numberLen > averageLen) {
-                numbersCompareAvg.add(numberLen);
-                System.out.println("Число: " + numbersAvg + ". Длина: " + numberLen + ".");
-            }
-        }
+        //numberCompareAverage(numbers, numbersCompareAvg, averageLen);
+    }*/
     }
 
     public static void main(String[] args) {
@@ -177,17 +184,22 @@ public class opTask1 {
 
         System.out.print("Введите числа: ");
 
-        input.addToArray(numbers,4);
-        input.sortArray(numbers);
-        input.elemLenArray(numbers);
+        input.addToArray(numbers, 4);
+        input.sortList(numbers);
+        input.lengthListElement(numbers);
 
         System.out.println("Задание 1.");
-
+        input.minListElement(numbers);
+        input.maxListElement(numbers);
 
         System.out.println();
         System.out.println("Задание 2.");
+        input.sortListAscending(numbers);
 
-        // call method with parameter count = 4
-        // input.getArgs(4);
+        System.out.println();
+        System.out.println("Задание 3.");
+        input.lengthList();
+        input.averageLength();
+        input.numberCompareAverage(numbers, numbersCompareAvg, averageLen);
     }
 }
