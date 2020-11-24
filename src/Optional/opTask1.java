@@ -170,7 +170,7 @@ public class opTask1 {
 
     public static void main(String[] args) {
         int numLength; // length of number
-        int numCount; // count of inputed numbers
+        int numCount = 0; // count of inputed numbers
         int sumLength = 0; // sum of numbers length
 
         opTask1 input = new opTask1();
@@ -199,7 +199,7 @@ public class opTask1 {
         System.out.println();
         System.out.println("Задание 3.");
         input.lengthList();
-        input.averageLength();
+        input.averageLength(sumLength, numCount);
         input.numberCompareAverage(numbers, numbersCompareAvg, averageLen);
     }
 }
