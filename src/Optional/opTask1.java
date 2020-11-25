@@ -88,14 +88,15 @@ public class opTask1 {
     }
 
     // get average length
-    public int averageLength(int sumLength, int numCount) {
-        int count = numCount;
+    public int averageLength(int sumLength, ArrayList<Integer> numbersLen) {
+        int numCount = numbersLen.size();
         try {
-            averageLen = Math.round(sumLength / count);
+            averageLen = Math.round(sumLength / numCount);
         }
         catch (ArithmeticException exp){
             System.err.print("Одно из слагаемых равно нулю!");
         };
+        System.out.println("Среднее значение длин: " + averageLen);
         return averageLen;
     }
 
@@ -149,8 +150,8 @@ public class opTask1 {
 
         System.out.println();
         System.out.println("Задание 3.");
-        input.lengthList(input.numbersLen);
-        input.averageLength(sumLength, numCount);
+       // input.lengthList(input.numbersLen);
+        input.averageLength(sumLength, input.numbersLen);
         input.numberCompareAverage(numbers, averageLen);
     }
 }
