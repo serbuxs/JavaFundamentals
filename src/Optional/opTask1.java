@@ -81,12 +81,6 @@ public class opTask1 {
         System.out.println("Самое длинное число: " + max + ". Длина числа: " + maxStr.length());
     }
 
-    // get count of input numbers and sum of their lengths
-    public int lengthList(ArrayList<Integer> numbersLen) {
-        int numCount = numbersLen.size();
-        return numCount;
-    }
-
     // get average length
     public int averageLength(int sumLength, ArrayList<Integer> numbersLen) {
         int numCount = numbersLen.size();
@@ -95,7 +89,7 @@ public class opTask1 {
         }
         catch (ArithmeticException exp){
             System.err.print("Одно из слагаемых равно нулю!");
-        };
+        }
         System.out.println("Среднее значение длин: " + averageLen);
         return averageLen;
     }
