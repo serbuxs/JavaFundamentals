@@ -89,9 +89,9 @@ public class opTask1 {
 
     // get average length
     public int averageLength(int sumLength, int numCount) {
+        int count = numCount;
         try {
-            averageLen = Math.round(sumLength / numCount);
-
+            averageLen = Math.round(sumLength / count);
         }
         catch (ArithmeticException exp){
             System.err.print("Одно из слагаемых равно нулю!");
