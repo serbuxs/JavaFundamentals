@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class opTask2 {
 
     public static int n = 0; // array size value
-    public static int m; // array range value
+    public static int m = 15; // array range value
 
     public int[][] setArray(int n) {
         int[][] twoDimArray = new int[n][n];
@@ -19,8 +19,10 @@ public class opTask2 {
 
     public int[][] getArray(int [][] twoDimArray) {
         System.out.println("Элементы матрицы: ");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++){
+        for (int i = 0; i < twoDimArray.length; i++) {
+            for (int j = 0; j < twoDimArray[i].length; j++){
+                // fill matrix by random numbers
+                twoDimArray[i][j] = (int)(Math.random() * m) - m/2;
                 System.out.print(" " + twoDimArray[i][j] + " ");
             }
             System.out.println();
