@@ -13,7 +13,18 @@ public class opTask2 {
 
     public int[][] setArray(int n) {
         int[][] twoDimArray = new int[n][n];
-        System.out.println(twoDimArray);
+        //System.out.println(twoDimArray);
+        return twoDimArray;
+    }
+
+    public int[][] getArray(int [][] twoDimArray) {
+        System.out.println("Элементы матрицы: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++){
+                System.out.print(" " + twoDimArray[i][j] + " ");
+            }
+            System.out.println();
+        }
         return twoDimArray;
     }
 
@@ -25,7 +36,8 @@ public class opTask2 {
         System.out.println("Ввести размерность матрицы: ");
         n = Integer.parseInt(inputNumber.next());
 
-        input.setArray(n);
+        //input.setArray(n);
+        input.getArray(input.setArray(n));
 
         System.out.println("Задать значение диапазона чисел: ");
     }
