@@ -14,15 +14,12 @@ public class opTask1 {
     Scanner inputNumber = new Scanner(System.in);
 
     public static int numLength; // length of number
-    public static int numCount; // count of inputed numbers
     public static int sumLength = 0; // sum of numbers length
     public static int i = 0;
-    public static int averageLen = 0;
+    public static double averageLen = 0;
 
     // create an ArrayList
-    //ArrayList<Integer> numbers = new ArrayList<>(); // ArrayList for storage int numbers
     ArrayList<Integer> numbersLen = new ArrayList<>(); // ArrayList for storage length of numbers
-    //ArrayList<Integer> numbersCompareAvg = new ArrayList<>(); // ArrayList for storage of numbers more than average
 
     // add elements to ArrayList
     public ArrayList<Integer> addToArray(ArrayList<Integer> numbers, int count) {
@@ -82,10 +79,10 @@ public class opTask1 {
     }
 
     // get average length
-    public int averageLength(int sumLength, ArrayList<Integer> numbersLen) {
+    public double averageLength(int sumLength, ArrayList<Integer> numbersLen) {
         int numCount = numbersLen.size();
         try {
-            averageLen = Math.round(sumLength / numCount);
+            averageLen = (double) sumLength / numCount;
         }
         catch (ArithmeticException exp){
             System.err.print("Одно из слагаемых равно нулю!");
@@ -95,7 +92,7 @@ public class opTask1 {
     }
 
     // compare number length with average
-    public void numberCompareAverage(ArrayList<Integer> numbers, int averageLen) {
+    public void numberCompareAverage(ArrayList<Integer> numbers, double averageLen) {
         ArrayList<Integer> numbersCompareAvg = new ArrayList<>();
         for (int numbersAvg : numbers) {
             String strNumberAvg = String.valueOf(numbersAvg); //convert to String element of numbersAvg
@@ -105,15 +102,6 @@ public class opTask1 {
                 System.out.println("Число: " + numbersAvg + ". Длина: " + numberLen + ".");
             }
         }
-
-        // get average length
-        //int averageLen = Math.round(sumLength / numCount);
-        //System.out.println("Среднее значение длин: " + averageLen);
-
-        //System.out.println();
-        //System.out.println("Задание 3.");
-        // compare number length with average
-        //numberCompareAverage(numbers, numbersCompareAvg, averageLen);
     }
 
     public static void main(String[] args) {
@@ -122,10 +110,6 @@ public class opTask1 {
 
         // create an ArrayList
         ArrayList<Integer> numbers = new ArrayList<>(); // ArrayList for storage int numbers
-        //ArrayList<Integer> numbersLen = new ArrayList<>(); // ArrayList for storage length of numbers
-        //ArrayList<Integer> numbersCompareAvg = new ArrayList<>(); // ArrayList for storage of numbers more than average*/
-
-        //Scanner inputNumber = new Scanner(System.in);
 
         System.out.print("Введите числа: ");
 
@@ -144,7 +128,6 @@ public class opTask1 {
 
         System.out.println();
         System.out.println("Задание 3.");
-       // input.lengthList(input.numbersLen);
         input.averageLength(sumLength, input.numbersLen);
         input.numberCompareAverage(numbers, averageLen);
     }
