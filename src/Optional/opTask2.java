@@ -4,8 +4,14 @@
 
 package Optional;
 
+
 public class opTask2 {
     public static void main(String[] args) {
+        int n = 0; // array size value
+        int m; // array range value
 
+        System.out.println("Ввести размерность матрицы: ");
+
+        System.out.println("Задать значение диапазона чисел: ");
     }
 }
