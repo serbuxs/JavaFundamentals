@@ -4,13 +4,28 @@
 
 package Optional;
 
+import java.util.Scanner;
 
 public class opTask2 {
+
+    public static int n = 0; // array size value
+    public static int m; // array range value
+
+    public int[][] setArray(int n) {
+        int[][] twoDimArray = new int[n][n];
+        System.out.println(twoDimArray);
+        return twoDimArray;
+    }
+
     public static void main(String[] args) {
-        int n = 0; // array size value
-        int m; // array range value
+
+        Scanner inputNumber = new Scanner(System.in);
+        opTask2 input = new opTask2();
 
         System.out.println("Ввести размерность матрицы: ");
+        n = Integer.parseInt(inputNumber.next());
+
+        input.setArray(n);
 
         System.out.println("Задать значение диапазона чисел: ");
     }
