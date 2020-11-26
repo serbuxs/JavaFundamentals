@@ -106,6 +106,7 @@ public class opTask1 {
 
     public static void main(String[] args) {
 
+        // create class object
         opTask1 input = new opTask1();
 
         // create an ArrayList
