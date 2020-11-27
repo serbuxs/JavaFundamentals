@@ -15,8 +15,9 @@ public class opTask2 {
 
 
     public int[][] setArray(int n) {
+        int[][] twoDimArray = new int[n][n];
         //System.out.println(twoDimArray);
-        return new int[n][n];
+        return twoDimArray;
     }
 
     public int[][] getArray(int [][] twoDimArray) {
