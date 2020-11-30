@@ -12,6 +12,7 @@ public class opTask2 {
     public static int n = 0; // array size value
     public static int m = 10; // array range value
     public static final Random rand = new Random();
+    public static int max = 0; // max number in array
 
 
     public int[][] setArray(int n) {
@@ -31,6 +32,10 @@ public class opTask2 {
             System.out.println();
         }
         return twoDimArray;
+    }
+    
+    public int[][] updArray() {
+        return 0;
     }
 
     public static void main(String[] args) {
