@@ -34,8 +34,16 @@ public class opTask2 {
         return twoDimArray;
     }
     
-    public int[][] updArray() {
-        return 0;
+    public int[][] updArray(int [][] twoDimArray) {
+        for (int i = 0; i < twoDimArray.length; i++) {
+            for (int j = 0; j < twoDimArray[i].length; j++) {
+                if (max < twoDimArray[i][j]) {
+                    max = twoDimArray[i][j];
+                }
+            }
+        }
+        System.out.println("max element in array: " + max);
+        return twoDimArray;
     }
 
     public static void main(String[] args) {
@@ -47,7 +55,8 @@ public class opTask2 {
         n = Integer.parseInt(inputNumber.next());
 
         //input.setArray(n);
-        input.getArray(input.setArray(n));
+        //input.getArray(input.setArray(n));
+        input.updArray(input.getArray(input.setArray(n)));
 
         System.out.println("Задать значение диапазона чисел: ");
     }
