@@ -37,9 +37,7 @@ public class opTask2 {
     public int[][] updArray(int [][] twoDimArray) {
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray[i].length; j++) {
-                if (max < twoDimArray[i][j]) {
-                    max = twoDimArray[i][j];
-                }
+                max = Math.max(max, twoDimArray[i][j]);
             }
         }
         System.out.println("max element in array: " + max);
