@@ -23,10 +23,10 @@ public class opTask2 {
     }
 
     public int[][] getArray(int[][] twoDimArray) {
+        // fill array by random numbers
         System.out.println("Элементы матрицы: ");
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray.length; j++) {
-                // fill matrix by random numbers
                 twoDimArray[i][j] = (int) (Math.random() * m - m / 2 + 1);
                 System.out.print(twoDimArray[i][j] + " ");
             }
