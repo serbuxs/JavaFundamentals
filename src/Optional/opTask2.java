@@ -61,8 +61,15 @@ public class opTask2 {
         Scanner inputNumber = new Scanner(System.in);
         opTask2 input = new opTask2();
 
+        //TODO add validation for all inputs
+
         System.out.print("Ввести размерность матрицы: ");
-        n = Integer.parseInt(inputNumber.next());
+        try {
+            n = Integer.parseInt(inputNumber.next());
+        }
+        catch (NumberFormatException exp) {
+            System.err.print("Неверный формат введенного значения!");
+        }
 
         System.out.print("Задать значение диапазона чисел: ");
         m = Integer.parseInt(inputNumber.next());
