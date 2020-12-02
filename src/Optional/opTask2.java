@@ -11,8 +11,8 @@ import java.util.*;
 public class opTask2 {
 
     public static int n = 0; // init array size value
-    public static int m = 10; // array range value
-    public static int column = 1;
+    public static int m = 0; // init array range value
+    public static int column = 0;
     public static final Random rand = new Random();
 
     public int[][] getArray(int n) {
@@ -48,8 +48,8 @@ public class opTask2 {
 
         // display sorted array
         System.out.println("Матрица после сортировки: ");
-        for (int i = 0; i < twoDimArray.length; i++ ){
-            for (int j = 0; j < twoDimArray.length; j++ ) {
+        for (int i = 0; i < twoDimArray.length; i++) {
+            for (int j = 0; j < twoDimArray.length; j++) {
                 System.out.print(twoDimArray[i][j] + " ");
             }
             System.out.println();
@@ -64,8 +64,12 @@ public class opTask2 {
         System.out.println("Ввести размерность матрицы: ");
         n = Integer.parseInt(inputNumber.next());
 
-        input.sortArray(input.getArray(n));
+        System.out.println("Задать значение диапазона чисел: ");
+        m = Integer.parseInt(inputNumber.next());
+        input.getArray(n);
 
-        // System.out.println("Задать значение диапазона чисел: ");
+        System.out.println("номер столбца для сортировки: ");
+        column = Integer.parseInt(inputNumber.next());
+        input.sortArray(input.getArray(n));
     }
 }
