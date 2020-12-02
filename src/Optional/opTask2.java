@@ -61,15 +61,17 @@ public class opTask2 {
         Scanner inputNumber = new Scanner(System.in);
         opTask2 input = new opTask2();
 
-        System.out.println("Ввести размерность матрицы: ");
+        System.out.print("Ввести размерность матрицы: ");
         n = Integer.parseInt(inputNumber.next());
 
-        System.out.println("Задать значение диапазона чисел: ");
+        System.out.print("Задать значение диапазона чисел: ");
         m = Integer.parseInt(inputNumber.next());
         input.getArray(n);
 
-        System.out.println("номер столбца для сортировки: ");
+        System.out.print("Номер столбца для сортировки: ");
         column = Integer.parseInt(inputNumber.next());
         input.sortArray(input.getArray(n));
+
+        System.out.print("Работа программы завершена.");
     }
 }
