@@ -10,19 +10,14 @@ import java.util.*;
 
 public class opTask2 {
 
-    public static int n = 0; // array size value
+    public static int n = 0; // init array size value
     public static int m = 10; // array range value
     public static int column = 1;
     public static final Random rand = new Random();
-    public static int max = 0; // max number in array
 
-
-    public int[][] setArray(int n) {
+    public int[][] getArray(int n) {
+        // create new array
         int[][] twoDimArray = new int[n][n];
-        return twoDimArray;
-    }
-
-    public int[][] getArray(int[][] twoDimArray) {
         // fill array by random numbers
         System.out.println("Элементы матрицы: ");
         for (int i = 0; i < twoDimArray.length; i++) {
@@ -69,9 +64,7 @@ public class opTask2 {
         System.out.println("Ввести размерность матрицы: ");
         n = Integer.parseInt(inputNumber.next());
 
-        //input.setArray(n);
-        //input.getArray(input.setArray(n));
-        input.updArray(input.getArray(input.setArray(n)));
+        input.sortArray(input.getArray(n));
 
         // System.out.println("Задать значение диапазона чисел: ");
     }
