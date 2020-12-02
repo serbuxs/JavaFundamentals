@@ -35,9 +35,9 @@ public class opTask2 {
         return twoDimArray;
     }
 
-    public void updArray(int[][] twoDimArray) {
+    public void sortArray(int[][] twoDimArray) {
+        // sort array elements using bubble sort
         for (int i = 0; i < twoDimArray.length; i++) {
-            int max = 0;
             for (int k = i + 1; k < twoDimArray.length; k++) {
                 if (twoDimArray[i][column] > twoDimArray[k][column]) {
                     for (int j = 0; j < twoDimArray.length; j++) {
@@ -50,6 +50,8 @@ public class opTask2 {
         }
 
         System.out.println();
+
+        // display sorted array
         System.out.println("Матрица после сортировки: ");
         for (int i = 0; i < twoDimArray.length; i++ ){
             for (int j = 0; j < twoDimArray.length; j++ ) {
