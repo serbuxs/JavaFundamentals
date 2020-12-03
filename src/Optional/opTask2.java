@@ -66,19 +66,31 @@ public class opTask2 {
         System.out.print("Ввести размерность матрицы: ");
         try {
             n = Integer.parseInt(inputNumber.next());
+            if (n > 0) {
+                System.out.print("Задать значение диапазона чисел: ");
+                m = Integer.parseInt(inputNumber.next());
+                if (m > 3) {
+                    System.out.print("Номер столбца для сортировки: ");
+                    column = Integer.parseInt(inputNumber.next());
+                    input.sortArray(input.getArray(n));
+                }
+                else if (m > 0 && m <= 3){
+                    System.out.println("Слишком малое значение размерности матрицы.");
+                }
+                else {
+                    System.out.println("Введено отрицательное значение размерности матрицы.");
+                }
+            }
+            else if (n < 0) {
+                System.out.println("Введено отрицательное значение размерности матрицы.");
+            }
+            else {
+                System.out.println("Введено нулевое значение размерности матрицы.");
+            }
+            System.out.print("Работа программы завершена.");
         }
         catch (NumberFormatException exp) {
             System.err.print("Неверный формат введенного значения!");
         }
-
-        System.out.print("Задать значение диапазона чисел: ");
-        m = Integer.parseInt(inputNumber.next());
-        input.getArray(n);
-
-        System.out.print("Номер столбца для сортировки: ");
-        column = Integer.parseInt(inputNumber.next());
-        input.sortArray(input.getArray(n));
-
-        System.out.print("Работа программы завершена.");
     }
 }
