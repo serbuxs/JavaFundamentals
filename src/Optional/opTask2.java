@@ -15,6 +15,8 @@ public class opTask2 {
     public static int column = 0;
     public static final Random rand = new Random();
 
+    //TODO random
+
     public int[][] getArray(int n) {
         // create new array
         int[][] twoDimArray = new int[n][n];
@@ -61,8 +63,6 @@ public class opTask2 {
         Scanner inputNumber = new Scanner(System.in);
         opTask2 input = new opTask2();
 
-        //TODO add validation for all inputs
-
         System.out.print("Ввести размерность матрицы: ");
         try {
             n = Integer.parseInt(inputNumber.next());
@@ -72,13 +72,21 @@ public class opTask2 {
                 if (m > 3) {
                     System.out.print("Номер столбца для сортировки: ");
                     column = Integer.parseInt(inputNumber.next());
-                    input.sortArray(input.getArray(n));
+                    if (column >= 0 && column <= n-1) {
+                        input.sortArray(input.getArray(n));
+                    }
+                    else if (column < 0){
+                        System.out.println("Введено отрицательное значение столбца матрицы.");
+                    }
+                    else {
+                        System.out.println("Введено значение столбца, превышающее границы матрицы.");
+                    }
                 }
-                else if (m > 0 && m <= 3){
-                    System.out.println("Слишком малое значение размерности матрицы.");
+                else if (m < 0){
+                    System.out.println("Введено отрицательное значение размерности матрицы.");
                 }
                 else {
-                    System.out.println("Введено отрицательное значение размерности матрицы.");
+                    System.out.println("Слишком малое значение размерности матрицы.");
                 }
             }
             else if (n < 0) {
