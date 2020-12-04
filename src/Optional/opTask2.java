@@ -13,9 +13,6 @@ public class opTask2 {
     public static int n = 0; // init array size value
     public static int m = 0; // init array range value
     public static int column = 0; // init number of column for array sort
-    public static final Random rand = new Random();
-
-    //TODO random
 
     public int[][] getArray(int n) {
         // create new array
@@ -45,7 +42,6 @@ public class opTask2 {
                 }
             }
         }
-
         System.out.println();
 
         // display sorted array
