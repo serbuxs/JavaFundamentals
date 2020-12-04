@@ -24,7 +24,7 @@ public class opTask2 {
         System.out.println("Элементы матрицы: ");
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray.length; j++) {
-                twoDimArray[i][j] = (int) (Math.random() * m - m / 2 + 1);
+                twoDimArray[i][j] = (int) (Math.random() * (2 * m) - m - 1); // random number range include input values
                 System.out.print(twoDimArray[i][j] + " ");
             }
             System.out.println();
